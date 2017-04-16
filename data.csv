@@ -1,17 +1,17 @@
-key,definition
-list,"The list is a most versatile datatype available in Python which can be written as a list of comma-separated values items between square brackets.,  https://www.tutorialspoint.com/python/python_lists.htm"
-module,"A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended.,  https://docs.python.org/3/tutorial/modules.html"
-csv,"The so-called CSV Comma Separated Values format is the most common import and export format for spreadsheets and databases. , https://docs.python.org/3/library/csv.html"
-newword,"newdefinition, newsource"
-variable,"A variable is a location in memory used to store some data value.,  https://www.programiz.com/python-programming/variables-datatypes"
-argument,"A value passed to a function or method when calling the function.,  https://docs.python.org/3.3/glossary.html"
-console terminal,"A Linux console terminal is one of the system consoles provided in the Linux kernel.The Linux console terminal acts as the medium for input and output operations for a Linux system.,  https://www.techopedia.com/definition/26897/linux-console-terminal"
-ASCII table,"ASCII character table includes descriptions of the first 32 non-printing characters. ASCII was actually designed for use with teletypes and so the descriptions are somewhat obscure.,  http://www.asciitable.com"
-tuple,"A tuple is a sequence of immutable Python objects.,  https://www.tutorialspoint.com/python/python_tuples.htm"
-IDLE,"Python’s Integrated Development and Learning Environment.,  https://docs.python.org/3/library/idle.html"
-dictionary,"Useful data type built into Python indexed by keys which can be any immutable type. Strings and numbers can always be keys.,  https://docs.python.org/2/tutorial/datastructures.html"
-parameter,"A named entity in a function or method definition that specifies an argument that the function can accept.,  https://docs.python.org/2/glossary.html"
-class,"A class is an extensible program-code-template for creating objects providing initial values for state member variables and implementations of behavior member functions or methods.,  https://en.wikipedia.org/wiki/Class_computer_programming"
-loop,"Sequence of statements which is specified once but which may be carried out several times in succession.,  https://en.wikipedia.org/wiki/Control_flow#Loops"
-boolean,"A data type having two values usually denoted true and false intended to represent the truth values of logic and Boolean algebra.,  https://en.wikipedia.org/wiki/Boolean_data_type"
-function,"A function is a block of organized reusable code that is used to perform a single related action., https://www.tutorialspoint.com/python/python_functions.htm"
+key,FirstDef,SecondDef
+argument,A value passed to a function (or method) when calling the function.,https://docs.python.org/3.3/glossary.html
+first,First,first
+csv,The so-called CSV (Comma Separated Values) format is the most common import and export format for spreadsheets and databases.,https://docs.python.org/3/library/csv.htm
+variable,A variable is a location in memory used to store some data (value).,https://www.programiz.com/python-programming/variables-datatypes
+tuple,A tuple is a sequence of immutable Python objects.,https://www.tutorialspoint.com/python/python_tuples.htm
+loop,Sequence of statements which is specified once but which may be carried out several times in succession.,https://en.wikipedia.org/wiki/Control_flow#Loops
+function,A function is a block of organized reusable code that is used to perform a single related action.,https://www.tutorialspoint.com/python/python_functions.htm
+IDLE,Python�s Integrated Development and Learning Environment,https://docs.python.org/3/library/idle.html
+class,A class is an extensible program-code-template for creating objects providing initial values for state (member variables) and implementations of behavior (member functions or methods),https://en.wikipedia.org/wiki/Class_(computer_programming
+module,A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended.,https://docs.python.org/3/tutorial/modules.html
+boolean,A data type having two values (usually denoted true and false) intended to represent the truth values of logic and Boolean algebra.,https://en.wikipedia.org/wiki/Boolean_data_type
+console terminal,A Linux console terminal is one of the system consoles provided in the Linux kernel.The Linux console terminal acts as the medium for input and output operations for a Linux system.,https://www.techopedia.com/definition/26897/linux-console-terminal
+ASCII table,ASCII character table includes descriptions of the first 32 non-printing characters. ASCII was actually designed for use with teletypes and so the descriptions are somewhat obscure.,http://www.asciitable.com
+list,The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets.,https://www.tutorialspoint.com/python/python_lists.htm
+dictionary,Useful data type built into Python indexed by keys which can be any immutable type. Strings and numbers can always be keys.,https://docs.python.org/2/tutorial/datastructures.html
+parameter,A named entity in a function (or method) definition that specifies an argument that the function can accept.,https://docs.python.org/2/glossary.html
