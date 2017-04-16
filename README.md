@@ -1,5 +1,3 @@
-# DictionaryForBegginer
-
 import csv
 
 #   Dictionary for a newbie
@@ -34,13 +32,13 @@ def zapisz():
     text_file = open("data.csv", "w").close()
 
     with open('data.csv', 'w') as csvfile:
-        fieldnames = ['key', 'definition']
+        fieldnames = ['key', 'FirstDef', 'SecondDef']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         writer.writeheader()
         for key in abc_of_dict:
 
-            writer.writerow({'key': key, 'definition': abc_of_dict[key][0] + ","+ abc_of_dict[key][1]})
+            writer.writerow({'key': key, 'FirstDef': abc_of_dict[key][0], 'SecondDef': abc_of_dict[key][1]})
 
 #----------------------------------------------------------------------------------------------------------------------#
 
@@ -62,15 +60,17 @@ def odczytaj():
 
     with open('data.csv', 'r') as csvfile:
 
-        fieldnames = ['key', 'definition']
+        fieldnames = ['key', 'FirstDef', 'SecondDef']
 
         reader = csv.DictReader(csvfile)
-
+        list_for_moment = []
         for row in reader:
+            list_for_moment.append(row['FirstDef'])
+            list_for_moment.append(row['SecondDef'])
 
+            abc_of_dict[(row['key'])] = list_for_moment
 
-            abc_of_dict[(row['key'])] = row['definition'].split(",")
-
+            list_for_moment = []
 
 
 ########--------------------------------------------------------------------------------------------------------########
@@ -84,7 +84,7 @@ except:
 storage = []
 
 for key in abc_of_dict:
-    storage.append(key.capitalize())
+    storage.append(key.lower())
 
 running = ""
 
@@ -116,14 +116,16 @@ while running != "stop":
         while k != 0:
             appelation = input("So about which thing u want to know more?: ")
 
-            if appelation.isalpha():
+            appel_copy = appelation.replace(" ", "")
+
+            if appel_copy.isalpha():
                 k = 0
             else:
                 print("Your appelation contain something other than letters! try again.\n")
 
-        appelation = appelation.capitalize()  # because key are capitalized too
-
+        appelation = appelation.lower()
         if appelation in storage:
+
             print(yellow + appelation + " is: " + off + abc_of_dict[appelation][0])
             print(yellow + "The source is:" + off, abc_of_dict[appelation][1])
 
@@ -137,18 +139,20 @@ while running != "stop":
         x = 1
         add_new_appel = ""
         while x != 0:
-            add_new_appel = input("Key name: ").capitalize()
-            if add_new_appel.isalpha() and add_new_appel not in storage:
+            add_new_appel = input("Key name: ").lower()
+
+            appel_copy = add_new_appel.replace(" ", "")
+
+            if appel_copy.isalpha() and add_new_appel not in storage:
                 x = 0
             elif add_new_appel in storage:
                 print(add_new_appel+" already exists in our dictionary.\n")
             else:
                 print("Error something goes wrong!\n")
 
-
         add_new_definition = input("Definition for the appellation: ")
         add_new_source = input("Source of the definition: ")
-        added = add_new_definition + "," + add_new_source
+        added = add_new_definition.capitalize() + "," + add_new_source
         added = added.split(",")
 
         abc_of_dict[add_new_appel] = added
@@ -158,20 +162,23 @@ while running != "stop":
 
     elif choice == 3:
 
-        storage = sorted(storage)
-        first_letter = storage[0][0]
-        print(first_letter + ":")
+        if len(storage) > 0:
 
-        for i in range(len(storage)):  # Print Sorted list by first Letter
+            storage = sorted(storage)
+            first_letter = storage[0][0]
+            print(first_letter + ":")
 
-            if first_letter != storage[i][0]:
-                first_letter = storage[i][0]
+            for i in range(len(storage)):  # Print Sorted list by first Letter
 
-                print("\n", end="")
-                print(first_letter + ":")
+                if first_letter != storage[i][0]:
+                    first_letter = storage[i][0]
 
-            print(storage[i])
+                    print("\n", end="")
+                    print(first_letter + ":")
 
+                print(storage[i].capitalize())
+        else:
+            print("Null elements in dictionary.")
 #----------------------------------------------------------------------------------------------------------------------#
 
     elif choice == 4:
@@ -190,7 +197,7 @@ while running != "stop":
 
         for i in range(len(storage)):
             if appelation.lower() in storage[i][0].lower():
-                print(storage[i])
+                print(storage[i].capitalize())
 
 #----------------------------------------------------------------------------------------------------------------------#
 
